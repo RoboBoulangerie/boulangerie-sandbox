@@ -28,12 +28,10 @@
   },
   {
     "path": "license",
-    "value": "Not Found",
-    "url": "https://cadre.med.wisc.edu/data/",
-    "confidence": 0.3,
-    "source": "pipeline",
-    "reviewed": false,
-    "auto_reviewed": false
+    "value": "https://creativecommons.org/licenses/by/4.0/",
+    "url": "https://github.com/RoboBoulangerie/boulangerie-sandbox/issues/1",
+    "confidence": 1.0,
+    "source": "maintainer"
   },
   {
     "path": "name",
