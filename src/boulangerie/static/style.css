@@ -245,7 +245,8 @@ code { font-size: 0.88em; background: var(--butter); padding: 0.05em 0.35em; bor
 .crawler pre { background: var(--butter); padding: 12px 14px; border-radius: 8px; overflow-x: auto; }
 .crawler pre code { background: none; padding: 0; }
 /* Stays at the top while scrolling; section jumps stop below it. */
-.preview-banner { position: sticky; top: 0; z-index: 10; background: var(--warn-bg); color: var(--ink);
-  border-bottom: 1px solid var(--line); padding: 8px 0; font-size: 0.92rem; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.preview-banner { position: sticky; top: 0; z-index: 10; background: #b3401a; color: #fff;
+  padding: 10px 0; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.preview-banner strong { text-transform: uppercase; letter-spacing: .04em; margin-right: .35em; }
 html:has(.preview-banner) { scroll-padding-top: 4.5rem; }
 @media (max-width: 720px) { .preview-banner { font-size: 0.85rem; padding: 6px 0; } }
