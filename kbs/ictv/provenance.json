@@ -10,12 +10,11 @@
   },
   {
     "path": "conditionsOfAccess",
-    "value": "Access to Zenodo’s content is open to all, for non-military purposes only.",
-    "url": "https://about.zenodo.org/terms/",
+    "value": "None",
+    "url": "https://github.com/RoboBoulangerie/boulangerie-sandbox/issues/16",
     "confidence": 1.0,
-    "source": "pipeline",
-    "reviewed": false,
-    "auto_reviewed": false
+    "source": "maintainer",
+    "issue": "https://github.com/RoboBoulangerie/boulangerie-sandbox/issues/16"
   },
   {
     "path": "conformsTo",
@@ -109,12 +108,11 @@
   },
   {
     "path": "name",
-    "value": "Virus Taxonomy: A Community Knowledgebase Supporting Virus Research",
-    "url": "https://zenodo.org/api/communities/ictv",
+    "value": "International Committee on Taxonomy of Viruses: ICTV",
+    "url": "https://github.com/RoboBoulangerie/boulangerie-sandbox/issues/16",
     "confidence": 1.0,
-    "source": "pipeline",
-    "reviewed": false,
-    "auto_reviewed": false
+    "source": "maintainer",
+    "issue": "https://github.com/RoboBoulangerie/boulangerie-sandbox/issues/16"
   },
   {
     "path": "publisher.name",
