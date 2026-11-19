@@ -46,7 +46,9 @@ EXT_TO_MIMES: dict[str, set[str]] = {
     ".json": {"application/json"},
     ".jsonl": {"application/jsonlines", "application/x-ndjson"},
     ".ndjson": {"application/jsonlines", "application/x-ndjson"},
-    ".parquet": {"application/parquet", "application/vnd.apache.parquet"},
+    # mlcroissant reads Parquet only when it's labelled application/x-parquet; it can't load
+    # application/parquet or application/vnd.apache.parquet, so those are flagged and fixed.
+    ".parquet": {"application/x-parquet"},
     ".zip": {"application/zip"},
 }
 # The value we write when fixing a mismatch automatically.
@@ -365,8 +367,9 @@ def check_credentials_in_links(croissant: dict) -> list[Finding]:
     return findings
 
 
-TABULAR_FORMATS = {"text/csv", "text/tab-separated-values", "text/tsv", "text/vcf", "application/parquet",
-                   "application/vnd.apache.parquet", "application/jsonlines", "application/x-ndjson"}
+TABULAR_FORMATS = {"text/csv", "text/tab-separated-values", "text/tsv", "text/vcf", "application/x-parquet",
+                   "application/parquet", "application/vnd.apache.parquet", "application/jsonlines",
+                   "application/x-ndjson"}
 # For compressed files, whose type only says "gzip", the name tells us what's inside.
 TABULAR_SUFFIXES = (".csv", ".tsv", ".vcf", ".parquet", ".jsonl", ".ndjson")
 _COMPRESSION = re.compile(r"\.(gz|bz2|xz|zip)$", re.IGNORECASE)

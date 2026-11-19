@@ -26,6 +26,7 @@ FORMAT_NAMES = {
     "application/json": "JSON",
     "application/jsonlines": "JSON Lines",
     "application/x-ndjson": "JSON Lines",
+    "application/x-parquet": "Parquet table",
     "application/parquet": "Parquet table",
     "application/vnd.apache.parquet": "Parquet table",
     "application/zip": "Zip archive",
