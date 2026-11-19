@@ -55,29 +55,29 @@
     "@type": "sc:Organization",
     "name": "Disease Ontology"
   },
-  "dateModified": "2026-05-30",
+  "dateModified": "2026-09-30",
   "dct:provenance": "The configured downloads page and related authoritative pages were crawled without using GitHub or any other public repository. The production OWL/OBO files, monthly releases, imports, subsets, reports, and translation PURLs advertised by the source ultimately resolve to GitHub; they were not downloaded or represented because repository sourcing was prohibited for this run. The source's first-party SPARQL documentation identifies doid.owl and doid-merged.owl as queryable graphs and describes retrieval of customized datasets. Complete subject-predicate-object CSV exports of both graphs were therefore downloaded directly from the authoritative DO-KB SPARQL endpoint. The downloaded graph exports contain 305,919 and 331,086 data rows, respectively, and identify version 2026-05-30 in their contents. All 24 same-site PDFs directly linked as DO project publications, tutorials, and curation documentation were also represented; newsletters and unrelated third-party materials were excluded. For each CSV, the exact in-band header subject,predicate,object was observed. Datatype inference sampled only the first four data lines after the header (five lines total) and conservatively assigns Text because RDF terms and literals may vary throughout each graph. No archives were downloaded. No location-oriented columns exist in the represented record sets, so no GeoCoordinates hierarchy is supported.",
   "description": "Discover disease knowledge, search the DO's OWL and OBO etiology-based disease classification English and Spanish DAGs.",
   "distribution": [
     {
       "@id": "file_doid_csv",
       "@type": "cr:FileObject",
-      "contentSize": "37354678",
-      "contentUrl": "https://sparql.disease-ontology.org/?query=SELECT+%3fsubject+%3fpredicate+%3fobject+FROM+%3chttp%3a%2f%2fpurl.obolibrary.org%2fobo%2fdoid.owl%3e+WHERE+%7b+%3fsubject+%3fpredicate+%3fobject+%7d",
+      "contentSize": "37895749",
+      "contentUrl": "https://sparql.disease-ontology.org/?query=SELECT+%3fsubject+%3fpredicate+%3fobject+FROM+%3chttp%3a%2f%2fpurl.obolibrary.org%2fobo%2fdoid.owl%3e+WHERE+%7b+%3fsubject+%3fpredicate+%3fobject+%7d&format=csv",
       "description": "Complete triple export of the DO's primary release graph, doid.owl, retrieved from the DO-KB SPARQL endpoint.",
       "encodingFormat": "text/csv",
       "name": "doid.csv",
-      "sha256": "e4935054f787e80eb9eb1c18e168c85f4037f111b0378ee637b1f13dfc231e0c"
+      "sha256": "898c20145f46ae3ff8576341b5ce3abca2116157fe393065dd5999e97eaf9739"
     },
     {
       "@id": "file_doid_merged_csv",
       "@type": "cr:FileObject",
-      "contentSize": "40510728",
-      "contentUrl": "https://sparql.disease-ontology.org/?query=SELECT+%3fsubject+%3fpredicate+%3fobject+FROM+%3chttp%3a%2f%2fpurl.obolibrary.org%2fobo%2fdoid%2fdoid-merged.owl%3e+WHERE+%7b+%3fsubject+%3fpredicate+%3fobject+%7d",
+      "contentSize": "41069366",
+      "contentUrl": "https://sparql.disease-ontology.org/?query=SELECT+%3fsubject+%3fpredicate+%3fobject+FROM+%3chttp%3a%2f%2fpurl.obolibrary.org%2fobo%2fdoid%2fdoid-merged.owl%3e+WHERE+%7b+%3fsubject+%3fpredicate+%3fobject+%7d&format=csv",
       "description": "Complete triple export of the DO's merged graph, including DO and imported classes, retrieved from the DO-KB SPARQL endpoint.",
       "encodingFormat": "text/csv",
       "name": "doid-merged.csv",
-      "sha256": "49d092750fee920d6d09756480b27e6e260d655940fb25231f90206340e563f4"
+      "sha256": "19e8afa0cd316fe255d335269872d3a423fe7f9e50643840c553e8c81ccf59e6"
     },
     {
       "@id": "file_document_01",
@@ -446,5 +446,5 @@
     }
   ],
   "url": "https://disease-ontology.org/",
-  "version": "2026-05-30"
+  "version": "2026-09-30"
 }
