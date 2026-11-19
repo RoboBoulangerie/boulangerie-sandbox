@@ -45,6 +45,17 @@ def test_format_extension_mismatch_has_fix(tiny_croissant):
     assert f.fix == {"path": "distribution[0].encodingFormat", "value": "text/tab-separated-values"}
 
 
+def test_parquet_is_fixed_to_the_type_mlcroissant_reads():
+    def parquet(fmt):
+        return {"distribution": [{"@id": "a", "@type": "cr:FileObject", "contentUrl": "https://x/t.parquet",
+                                  "encodingFormat": fmt}]}
+
+    for unreadable in ("application/parquet", "application/vnd.apache.parquet"):
+        [f] = _by_check(checks.check_distributions(parquet(unreadable)))["format_extension_mismatch"]
+        assert f.fix == {"path": "distribution[0].encodingFormat", "value": "application/x-parquet"}
+    assert "format_extension_mismatch" not in _by_check(checks.check_distributions(parquet("application/x-parquet")))
+
+
 def test_duplicate_ids_and_repeated_urls_reported_once():
     dist = {"@id": "a", "@type": "cr:FileObject", "contentUrl": "https://x/data.zip",
             "encodingFormat": "application/zip"}
